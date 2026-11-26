@@ -12,6 +12,7 @@ Saída: <pasta>/rosto.json com:
 Detector: OpenCV Haar (frontal); a cabeça inteira é estimada como o retângulo do rosto esticado 35 % para cima.
 Precisa: python3 -m pip install opencv-python-headless numpy
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import argparse, json, os, sys
 import numpy as np
 try: import cv2

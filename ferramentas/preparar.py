@@ -12,6 +12,7 @@ Saída na pasta:
 Precisa de ffmpeg/ffprobe e whisper-cli (whisper.cpp) com um modelo ggml; a variável WHISPER_MODEL aponta o modelo.
 O motor de corte (corte/) usa a mesma transcrição; se ele já gerou cortepalavras.json, use --de-corte para só converter.
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import argparse, json, os, shutil, subprocess, sys, tempfile
 
 MODELOS = ["~/.cache/whisper-cpp/ggml-large-v3-turbo.bin", "~/.cache/whisper-cpp/ggml-large-v3.bin", "~/.cache/whisper-cpp/ggml-medium.bin"]

@@ -9,6 +9,7 @@
 uso:  python3 4-conferir.py PASTA [--prompt "nomes próprios do vídeo"]
 saída: PASTA/cortepalavras.json, PASTA/conferencia.txt (e o mesmo na tela)
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import json, os, subprocess, sys, unicodedata
 import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))

@@ -8,6 +8,7 @@ suspeitos. O alerta compara, nas faixas fora da caixa, a densidade de bordas do 
 só-câmera (se --camera for dado) ou com um limiar fixo; serve para apontar ONDE olhar, a decisão final é visual.
 Perfis: reels = x 90–990, y 220–1520, e coluna de botões x>940 & y>1150 proibida; anuncio = x 65–1015, y 270–1248.
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import argparse, json, os, subprocess, sys, tempfile
 import numpy as np
 try: import cv2

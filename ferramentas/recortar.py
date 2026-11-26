@@ -7,6 +7,7 @@ Saída: <pasta>/matte/fg.mov (ProRes 4444 com alfa, mesma taxa do original) e <p
 para usar em <video> no HyperFrames). Roda no Python do venv que tem torch (variável RVM_PYTHON, regra R10); baixa
 o modelo pelo torch.hub na primeira vez. Em vídeo 2560×1440 leva alguns minutos por minuto de vídeo (MPS/CPU).
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import argparse, json, os, subprocess, sys
 
 def main():
