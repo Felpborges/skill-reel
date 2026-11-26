@@ -7,6 +7,7 @@ Mede: resolução (1080×1920), fps, duração, LUFS integrado e pico, zona segu
 densidade de SFX (se sons.json tiver a lista de tempos), e lembra os itens que só o olho confere (R1 rosto,
 legibilidade, correções da legenda). Sai com 1 se algum item medido reprovou.
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import argparse, json, os, subprocess, sys, datetime
 
 AQUI = os.path.dirname(os.path.abspath(__file__))

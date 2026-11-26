@@ -7,6 +7,7 @@ Detector: MediaPipe Face Landmarker (o da referência aprovada; modelo em FACE_M
 ./.modelos/). Sem mediapipe, cai para o OpenCV (Haar frontal) com a boca estimada pela caixa do rosto — mais
 grosseiro, mas a legenda continua aparecendo abaixo do queixo.
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import json, os, sys, urllib.request
 import cv2
 

@@ -20,6 +20,7 @@ entradas: PASTA/keeps.json {"keeps":[{"from","to","why", "raw"?}]}, PASTA/audio1
 saídas:   PASTA/edl.json (trechos + deslocamento da imagem), PASTA/corte.wav (48 kHz estéreo),
           PASTA/corte16k.wav, PASTA/vicios-removidos.txt, PASTA/clean.mp4 (horizontal, com J/L)
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import glob, json, os, subprocess, sys, unicodedata, wave
 import numpy as np
 

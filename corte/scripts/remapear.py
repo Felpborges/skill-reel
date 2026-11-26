@@ -7,6 +7,7 @@ como módulo:  from remapear import Mapa;  m = Mapa("velho/cortepalavras.json", 
               m.novo(t_velho) · m.velho(t_novo)
 na linha de comando:  python3 remapear.py velho.json novo.json 0.87 2.73 ...   (imprime velho → novo)
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import difflib, json, sys, unicodedata
 import numpy as np
 

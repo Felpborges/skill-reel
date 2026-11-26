@@ -7,6 +7,7 @@ nos silêncios longos.
 uso:  python3 2-vicios.py PASTA          (lê PASTA/keeps.json e PASTA/audio16k.wav)
 saída: PASTA/vicios/k{i}.json  (palavras com tempo da FONTE) e o texto de cada keep na tela
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import json, os, sys
 import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))

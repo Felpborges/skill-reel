@@ -7,6 +7,7 @@ transcrito sozinho — é isso que mostra as retomadas, frases abandonadas e fal
 uso:  python3 1-tomadas.py VIDEO PASTA
 saída: PASTA/audio16k.wav, PASTA/tomadas.json, PASTA/tomadas.txt  (leia o .txt para escolher os keeps)
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import json, os, sys, wave
 import numpy as np
 import os as _os, sys as _sys

@@ -7,6 +7,7 @@ Uso: ferramentas/ancoras.py <pasta com palavras.json> "frase exata" ["outra fras
   Com --json imprime {"frase": {"i":…, "f":…, "palavras": […]}} para todas as frases pedidas.
 Em código (gerador do estilo): `from ancoras import Ancoras; A = Ancoras("preparo"); t = A.at("três ferramentas")`.
 """
+import sys as _s; [getattr(_s, n).reconfigure(encoding="utf-8", errors="replace") for n in ("stdout", "stderr") if hasattr(getattr(_s, n), "reconfigure")]  # Windows: saída em UTF-8
 import argparse, json, os, re, sys, unicodedata
 
 def norm(s): return re.sub(r"[^\w ]", "", unicodedata.normalize("NFD", s).encode("ascii", "ignore").decode().lower()).split()
